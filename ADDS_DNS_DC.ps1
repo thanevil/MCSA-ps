@@ -9,7 +9,7 @@ Start-Sleep -Seconds 3
 
 "@Echo off " | Out-File -FilePath .\Run.cmd -Encoding utf8 -Force
 "cls" | Out-File -FilePath .\Run.cmd -Encoding utf8 -Append
-"powershell.exe -ExecutionPolicy bypass -File .\4.ps1" | Out-File -FilePath .\Run.cmd -Encoding utf8 -Append
+"powershell.exe -ExecutionPolicy bypass -File .\OU_add_bulk_users.ps1" | Out-File -FilePath .\Run.cmd -Encoding utf8 -Append
 
 Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath “C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName cyber.local -DomainNetbiosName cyber -ForestMode “Win2012R2” -InstallDns:$true -LogPath “C:\Windows\NTDS” -NoRebootOnCompletion:$false -SysvolPath “C:\Windows\SYSVOL” -Force:$true
 
